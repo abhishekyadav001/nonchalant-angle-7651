@@ -7,31 +7,30 @@
     <title>Order Meat Online - Buy Fresh Meat</title>
   </head>
   <style>
-    body{
-        height: 1000vh;
-
+    body {
+      height: 700vh;
     }
     .navbarparent {
       align-items: center;
+      background-color: white;
       width: 100%;
       margin-top: 50px;
-      border: 1px solid;
+
       height: auto;
-      position: -webkit-sticky;
-    position: sticky;
-      top:0;
+      position: sticky;
+      top: 0;
       padding: 5px;
+      z-index: 10;
+      font-size: 18px;
     }
     .navbar {
       display: flex;
       margin: auto;
       justify-content: space-between;
+      align-items: center;
       height: 70px;
       width: 70%;
       padding: 10px;
-     
-      
-      
     }
     .logodiv {
       width: 95px;
@@ -39,7 +38,6 @@
     }
 
     .logodiv > img {
-      border: 1px solid red;
       width: 100%;
       height: 100%;
     }
@@ -47,60 +45,131 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: ;
     }
-    .locologo {
-      border: 1px solid;
-    }
+
     .locologo > img {
-      border: 1px solid;
       width: 29px;
       height: 30px;
     }
-    .paragraph > .city {
-      border: 1px solid;
-      font-size: 10px;
+    .paragraph > p {
+      margin: 5px;
     }
-    .paragraph > .address {
-      border: 1px solid;
-      font-size: 10px;
-    }
+
     .searchbar {
-      border: 1px solid;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      position: relative;
+      height: 40px;
     }
-    .searchbar>.submitbutton{
-       
+    .searchbar > input {
+      padding: 0px 15px;
+      height: 100%;
+      width: 400px;
+      outline: none;
+    }
+    .searchbar > #submitbutton {
+      position: absolute;
+      right: 10px;
+      top: 25%;
     }
     .categories {
-      border: 1px solid;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     .categories > img {
-      border: 1px solid;
       width: 50%;
       height: 50%;
     }
     .login {
-      border: 1px solid;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     .cart {
-      border: 1px solid;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
     }
-    .cart > div {
+    .banner {
+      width: 100%;
+      position: relative;
+      margin: auto;
+      margin-top: 1px;
     }
-  
+    .banner > img {
+      width: 101%;
+      margin: auto;
+    }
+    .banner button {
+      position: absolute;
+
+      top: 40%;
+      padding: 10px 20px;
+      border: 0;
+      border-radius: 50%;
+      font-size: 70px;
+    }
+    .banner > #firstbutton:hover {
+      background-color: #ffff;
+    }
+    .banner > button:nth-child(2) {
+      right: -5px;
+    }
+    .categoriesshop {
+      width: 100%;
+      margin: auto;
+    }
+    .categorieschild {
+      width: 70%;
+      margin: auto;
+    }
+    .heading > h2 {
+      margin: 15px 0px 5px 6px;
+    }
+    .heading > p {
+      margin: 0px 0px 10px 6px;
+      opacity: 0.6;
+    }
+    .categoriesbox {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .categoriesbox > div {
+      text-align: center;
+    }
+    .categoriesbox > div > img {
+      width: 100%;
+      height: auto;
+    }
+    .categoriesbox > div > img:hover {
+      transform: scale 2px;
+    }
+    .premiumdelivery {
+      margin-top: 50px;
+      width: 100%;
+    }
+    .deliverychild {
+      width: 50%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      background-color: #fedb92;
+    }
+    .deliverychild > .Meatopiatop {
+      display: flex;
+      justify-content: space-between;
+    }
+    .Meatopiatop > .deliverypremium {
+      background-color: #d11243;
+      border: 0;
+      border-radius: 3px;
+      padding: 7px;
+      color: white;
+    }
   </style>
 
   <body>
@@ -108,54 +177,145 @@
     <div class="navbarparent">
       <div class="navbar">
         <div class="logodiv">
-          <img
-            src="https://www.licious.in/img/rebranding/licious-logo.svg"
-            alt="licious-logo"
-          />
+          <img src="https://www.licious.in/img/rebranding/licious-logo.svg" alt="licious-logo" />
         </div>
         <div class="location">
           <div class="locologo">
-            <img
-              src="https://www.licious.in/img/rebranding/location_icon.svg"
-              alt="location_icon"
-            />
+            <img src="https://www.licious.in/img/rebranding/location_icon.svg" alt="location_icon" />
           </div>
           <div class="paragraph">
-            <div class="city"><p>PUNE</p></div>
-            <div class="address"><p>GV4C+Q77,Ashok Nagar....</p></div>
+            <p>PUNE</p>
+            <p>GV4C+Q77,Ashok Nagar....</p>
           </div>
         </div>
         <div class="searchbar">
-          <form>
-            <input type="text" placeholder="Search for any delicious product" />
-            <input type="submit" id="submitbutton" value="search" />
-          </form>
+          <input type="text" placeholder="Search for any delicious product" />
+          <img id="submitbutton" src="https://www.licious.in/img/rebranding/search_icon.svg" />
         </div>
         <div class="categories">
-          <img
-            src="https://www.licious.in/img/rebranding/category-dropdown-icon.svg"
-            alt="categories"
-          />
+          <img src="https://www.licious.in/img/rebranding/category-dropdown-icon.svg" alt="categories" /> &nbsp;&nbsp;
           <p>Categories</p>
         </div>
         <div class="login">
-          <img
-            src="https://www.licious.in/img/rebranding/profile_icon.svg"
-            alt="login"
-          />
+          <img src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="login" />&nbsp;&nbsp;
           <p>Login</p>
         </div>
         <div class="cart">
-          <div>
-            <img
-              src="https://www.licious.in/img/rebranding/cart_icon.svg"
-              alt="cartlogo"
-            />
-          </div>
+          <div><img src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="cartlogo" />&nbsp;&nbsp;</div>
           <div><p>Cart</p></div>
         </div>
       </div>
     </div>
-
+    <div class="banner">
+      <img src="https://d2407na1z3fc0t.cloudfront.net/Slider/banner_62c7158f31f30" alt="banner" />
+      <button id="firstbutton">></button>
+      <button><</button>
+    </div>
+    <div class="categoriesshop">
+      <div class="categorieschild">
+        <div class="heading">
+          <h2>Shop by categories</h2>
+          <p>Freshest meats just for you</p>
+        </div>
+        <div class="categoriesbox">
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/539819fa-f8f5-6148-d407-95522fa17a28/original/Todays-deal21.png"
+              alt="Todaysdeal"
+            />
+            <h4>Today's Deals</h4>
+          </div>
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/479a9750-d9a2-33ff-0693-3044a9dcae91/original/Chicken.png"
+              alt="Chicken"
+            />
+            <h4>Chicken</h4>
+          </div>
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/46494180-ff34-2236-4240-da12222c4d23/original/Fish___Seafood.png"
+              alt="Chicken"
+            />
+            <h4>Fish & Seafood</h4>
+          </div>
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/952cc910-319c-0b5d-fa34-373f05f0917a/original/Mutton.png"
+              alt="mutton"
+            />
+            <h4>Mutton</h4>
+          </div>
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/1db15fd5-a5d3-b275-1579-2e3b2edc0d30/original/RTC.png?format=webp"
+              alt="Ready to cook"
+            />
+            <h4>Ready to Cook</h4>
+          </div>
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/Category/2105beee-e9a9-3efd-4912-2b9657f32d99/original/1604284739.3526--2020-11-0208_08_59--472.jpeg?format=webp"
+              alt="Prawns"
+            />
+            <h4>Prawns</h4>
+          </div>
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/db686e9b-3609-a719-49a6-435a883a1d59/original/Cold-Cuts_(1).png?format=webp"
+              alt="Cold-Cuts_"
+            />
+            <h4>Cold Cuts</h4>
+          </div>
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/a73279cf-eb46-a552-c7bd-10361814ae92/original/Spread.png?format=webp"
+              alt="Spread"
+            />
+            <h4>Spreads</h4>
+          </div>
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/a73279cf-eb46-a552-c7bd-10361814ae92/original/Spread.png?format=webp"
+              alt="Eggs"
+            />
+            <h4>Eggs</h4>
+          </div>
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/ecf1b530-d791-c509-b17c-43ccaabf9921/original/1.jpg?format=webp"
+              alt="imgbriyani"
+            />
+            <h4>Biryani & Kebab</h4>
+          </div>
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/Category/8209cc57-cc85-4e5d-ac6b-4d8f2f36c1ce/original/1604645369.2866--2020-11-0612_19_29--738.jpeg?format=webp"
+              alt="dao"
+            />
+            <h4>Combos</h4>
+          </div>
+          <div>
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/050c5580-8e16-30f3-213f-f109d86be44a/original/cat-image_(1).jpg?format=webp"
+              alt="Featured Collections"
+            />
+            <h4>Featured Collections</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="premiumdelivery">
+      <div class="deliverychild">
+        <div class="Meatopiatop">
+          <img src="https://www.licious.in/img/rebranding/loyalty_licious_logo.svg" alt="top" />
+          <button class="deliverypremium">JOIN NOW</button>
+        </div>
+        <hr class="divider" />
+        <div class="bottom">
+          <p>Enjoy unlimited free delivery & perks crafted for true meat lovers</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
