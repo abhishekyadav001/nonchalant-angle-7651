@@ -20,7 +20,7 @@
       position: sticky;
       top: 0;
       padding: 5px;
-      z-index: 10;
+      z-index: 110;
       font-size: 18px;
     }
     .navbar {
@@ -28,17 +28,17 @@
       margin: auto;
       justify-content: space-between;
       align-items: center;
-      height: 70px;
+      height: 50px;
       width: 70%;
       padding: 10px;
     }
     .logodiv {
-      width: 95px;
+      width: auto;
       height: 100%;
     }
 
     .logodiv > img {
-      width: 100%;
+      width: 100px;
       height: 100%;
     }
     .location {
@@ -79,16 +79,25 @@
       width: 50%;
       height: 50%;
     }
+    .categories > p:hover {
+      color: #d11243;
+    }
     .login {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    .login > p:hover {
+      color: #d11243;
     }
     .cart {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
+    }
+    .cart p:hover {
+      color: #d11243;
     }
     .banner {
       width: 100%;
@@ -150,6 +159,7 @@
     .premiumdelivery {
       margin-top: 50px;
       width: 100%;
+      margin-bottom: 50px;
     }
     .deliverychild {
       width: 50%;
@@ -157,11 +167,13 @@
       display: flex;
       flex-direction: column;
       padding: 10px;
+      border-radius: 10px;
       background-color: #fedb92;
     }
     .deliverychild > .Meatopiatop {
       display: flex;
       justify-content: space-between;
+      height: 70%;
     }
     .Meatopiatop > .deliverypremium {
       background-color: #d11243;
@@ -169,6 +181,43 @@
       border-radius: 3px;
       padding: 7px;
       color: white;
+    }
+    .premiumdelivery {
+      width: 100%;
+    }
+    .productfeatures {
+      padding-left: 10px;
+    }
+    .featureslist {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      border: 1px dotted grey;
+    }
+    .featureslist > div {
+      border-right: 1px solid wheat;
+      width: 20%;
+    }
+    .featureslist > div:last-child {
+      border-left: 1px solid wheat;
+      border-right: 0px;
+    }
+    .productfeatures > .heading {
+      text-align: center;
+
+      background-color: white;
+      display: block;
+      width: fit-content;
+      margin: auto;
+      margin-bottom: -12px;
+    }
+    .offerimage {
+      width: 100%;
+      margin-top: 50px;
+    }
+    .offerimage > .image {
+      width: 50%;
+      margin: auto;
     }
   </style>
 
@@ -315,6 +364,41 @@
         <div class="bottom">
           <p>Enjoy unlimited free delivery & perks crafted for true meat lovers</p>
         </div>
+      </div>
+    </div>
+    <div class="productfeatures">
+      <div class="heading">Know the Licious way</div>
+      <div class="featureslist">
+        <div>
+          <p>Premium</p>
+          <p>Produce</p>
+        </div>
+        <div>
+          <p>World-Class Central</p>
+          <p>Production Unit</p>
+        </div>
+        <div>
+          <p>150 Quality</p>
+          <p>Checks</p>
+        </div>
+        <div>
+          <p>Delivered Fresh</p>
+          <p>Everyday</p>
+        </div>
+        <div>
+          <p>Extraordinary</p>
+          <p>Cooking</p>
+        </div>
+      </div>
+      <button>Discover Now ᐯ</button>
+    </div>
+    <div class="offerimage">
+      <div class="image">
+        <a href="./topnavbar.html"
+          ><img
+            src="https://dao54xqhg9jfa.cloudfront.net/OMS-StaticBanner/2009d707-8f4d-528b-6df4-c75c9557f4d3/original/static-bank-units-July-web_(15).jpg?format=webp"
+            alt="offerbox"
+        /></a>
       </div>
     </div>
   </body>
