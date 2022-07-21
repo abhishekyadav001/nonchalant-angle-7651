@@ -1,477 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Order Meat Online - Buy Fresh Meat</title>
-  </head>
-  <style>
-    body {
-      height: 700vh;
-    }
-    .navbarparent {
-      align-items: center;
-      background-color: white;
-      width: 100%;
-      margin-top: 50px;
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Meat Online - Buy Fresh Meat</title>
+  <link rel="stylesheet" href="licious.css">
+</head>
 
-      height: auto;
-      position: sticky;
-      top: 0;
-      padding: 5px;
-      z-index: 110;
-      font-size: 18px;
-    }
-    .navbar {
-      display: flex;
-      margin: auto;
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      width: 70%;
-      padding: 10px;
-    }
-    .logodiv {
-      width: auto;
-      height: 100%;
-    }
-
-    .logodiv > img {
-      width: 100px;
-      height: 100%;
-    }
-    .location {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .locologo > img {
-      width: 29px;
-      height: 30px;
-    }
-    .paragraph > p {
-      margin: 5px;
-    }
-
-    .searchbar {
-      position: relative;
-      height: 40px;
-    }
-    .searchbar > input {
-      padding: 0px 15px;
-      height: 100%;
-      width: 400px;
-      outline: none;
-    }
-    .searchbar > #submitbutton {
-      position: absolute;
-      right: 10px;
-      top: 25%;
-    }
-    .categories {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .categories > img {
-      width: 50%;
-      height: 50%;
-    }
-    .categories > p:hover {
-      color: #d11243;
-    }
-    .login {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .login > p:hover {
-      color: #d11243;
-    }
-    .cart {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-    .cart p:hover {
-      color: #d11243;
-    }
-    .banner {
-      width: 100%;
-      position: relative;
-      margin: auto;
-      margin-top: 1px;
-    }
-    .banner > img {
-      width: 101%;
-      margin: auto;
-    }
-    .banner button {
-      position: absolute;
-
-      top: 40%;
-      padding: 10px 20px;
-      border: 0;
-      border-radius: 50%;
-      font-size: 70px;
-    }
-    .banner > #firstbutton:hover {
-      background-color: #ffff;
-    }
-    .banner > button:nth-child(2) {
-      right: -5px;
-    }
-    .categoriesshop {
-      width: 100%;
-      margin: auto;
-    }
-    .categorieschild {
-      width: 70%;
-      margin: auto;
-    }
-    .heading > h2 {
-      margin: 15px 0px 5px 6px;
-    }
-    .heading > p {
-      margin: 0px 0px 10px 6px;
-      opacity: 0.6;
-    }
-    .categoriesbox {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      padding-right: 10px;
-      padding-left: 10px;
-    }
-    .categoriesbox > div {
-      text-align: center;
-    }
-    .categoriesbox > div > img {
-      width: 100%;
-      height: auto;
-    }
-    .categoriesbox > div > img:hover {
-      transform: scale 2px;
-    }
-    .premiumdelivery {
-      margin-top: 50px;
-      width: 100%;
-      margin-bottom: 50px;
-    }
-    .deliverychild {
-      width: 50%;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      padding: 10px;
-      border-radius: 10px;
-      background-color: #fedb92;
-    }
-    .deliverychild > .Meatopiatop {
-      display: flex;
-      justify-content: space-between;
-      height: 70%;
-    }
-    .Meatopiatop > .deliverypremium {
-      background-color: #d11243;
-      border: 0;
-      border-radius: 3px;
-      padding: 7px;
-      color: white;
-    }
-    .premiumdelivery {
-      width: 100%;
-    }
-    .productfeatures {
-      padding-left: 10px;
-    }
-    .featureslist {
-      display: flex;
-      justify-content: space-between;
-      text-align: center;
-      border: 1px dotted grey;
-    }
-    .featureslist > div {
-      border-right: 1px solid wheat;
-      width: 20%;
-    }
-    .featureslist > div:last-child {
-      border-left: 1px solid wheat;
-      border-right: 0px;
-    }
-    .productfeatures > .heading {
-      text-align: center;
-
-      background-color: white;
-      display: block;
-      width: fit-content;
-      margin: auto;
-      margin-bottom: -12px;
-    }
-    .offerimage {
-      width: 100%;
-      margin-top: 50px;
-    }
-    .offerimage > .image {
-      width: 50%;
-      margin: auto;
-    }
-  </style>
-
-  <body>
-    <div class="instruction"></div>
-    <div class="navbarparent">
-      <div class="navbar">
-        <div class="logodiv">
-          <img src="https://www.licious.in/img/rebranding/licious-logo.svg" alt="licious-logo" />
+<body>
+  <div class="instruction"></div>
+  <div class="navbarparent">
+    <div class="navbar">
+      <div class="logodiv">
+        <a href="./topnavbar.html"><img src="https://www.licious.in/img/rebranding/licious-logo.svg"
+            alt="licious-logo" /></a>
+      </div>
+      <div class="location">
+        <div class="locologo">
+          <img src="https://www.licious.in/img/rebranding/location_icon.svg" alt="location_icon" />
         </div>
-        <div class="location">
-          <div class="locologo">
-            <img src="https://www.licious.in/img/rebranding/location_icon.svg" alt="location_icon" />
-          </div>
-          <div class="paragraph">
-            <p>PUNE</p>
-            <p>GV4C+Q77,Ashok Nagar....</p>
-          </div>
-        </div>
-        <div class="searchbar">
-          <input type="text" placeholder="Search for any delicious product" />
-          <img id="submitbutton" src="https://www.licious.in/img/rebranding/search_icon.svg" />
-        </div>
-        <div class="categories">
-          <img src="https://www.licious.in/img/rebranding/category-dropdown-icon.svg" alt="categories" /> &nbsp;&nbsp;
-          <p>Categories</p>
-        </div>
-        <div class="login">
-          <img src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="login" />&nbsp;&nbsp;
-          <p>Login</p>
-        </div>
-        <div class="cart">
-          <div><img src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="cartlogo" />&nbsp;&nbsp;</div>
-          <div><p>Cart</p></div>
+        <div class="paragraph">
+          <p>PUNE</p>
+          <p>GV4C+Q77,Ashok Nagar....</p>
         </div>
       </div>
-    </div>
-    <div class="banner">
-      <img src="https://d2407na1z3fc0t.cloudfront.net/Slider/banner_62c7158f31f30" alt="banner" />
-      <button id="firstbutton">></button>
-      <button><</button>
-    </div>
-    <div class="categoriesshop">
-      <div class="categorieschild">
-        <div class="heading">
-          <h2>Shop by categories</h2>
-          <p>Freshest meats just for you</p>
+      <div class="searchbar">
+        <input type="text" placeholder="Search for any delicious product" />
+        <img id="submitbutton" src="https://www.licious.in/img/rebranding/search_icon.svg" />
+      </div>
+      <div class="categories">
+        <div>
+          <img src="https://www.licious.in/img/rebranding/category-dropdown-icon.svg" alt="categories" /> &nbsp;&nbsp;
+          <span>Categories</span>
         </div>
-        <div class="categoriesbox">
-          <div>
+      </div>
+      <div class="login">
+        <img src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="login" />&nbsp;&nbsp;
+        <p>Login</p>
+      </div>
+      <div class="cart">
+        <div><img src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="cartlogo" />&nbsp;&nbsp;</div>
+        <div>
+          <p>Cart</p>
+        </div>
+      </div>
+
+      <div class="headpoints">
+        <div>
+          <div class="menu">
             <img
               src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/539819fa-f8f5-6148-d407-95522fa17a28/original/Todays-deal21.png"
-              alt="Todaysdeal"
-            />
-            <h4>Today's Deals</h4>
+              alt="">
+            <h3>Today's Deals</h3>
           </div>
-          <div>
+
+          <div class="Chicken">
+            <p>Ready to Cook</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
             <img
               src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/479a9750-d9a2-33ff-0693-3044a9dcae91/original/Chicken.png"
-              alt="Chicken"
-            />
-            <h4>Chicken</h4>
+              alt="">
+            <h3>chicken</h3>
           </div>
-          <div>
+          <div class="Chicken">
+            <p>Curry Cuts</p>
+            <p>Boneless & Mince</p>
+            <p>Speciality Cuts</p>
+            <p>Offals</p>
+            <p>Combos</p>
+            <p>Ready to Cook</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
             <img
               src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/46494180-ff34-2236-4240-da12222c4d23/original/Fish___Seafood.png"
-              alt="Chicken"
-            />
-            <h4>Fish & Seafood</h4>
+              alt="">
+            <h3>Fish & Seafood</h3>
           </div>
-          <div>
+          <div class="Fish">
+            <p>Freshwater</p>
+            <p>Seawater</p>
+            <p>Ready to Cook</p>
+            <p>Crab</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
             <img
               src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/952cc910-319c-0b5d-fa34-373f05f0917a/original/Mutton.png"
-              alt="mutton"
-            />
-            <h4>Mutton</h4>
+              alt="">
+            <h3>Mutton</h3>
           </div>
-          <div>
-            <img
-              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/1db15fd5-a5d3-b275-1579-2e3b2edc0d30/original/RTC.png?format=webp"
-              alt="Ready to cook"
-            />
-            <h4>Ready to Cook</h4>
+          <div class="Mutton">
+            <p>Curry Cuts</p>
+            <p>Boneless & Mince</p>
+            <p>Speciality Cuts </p>
+            <p>Offals </p>
+            <p>Combos</p>
+            <p>Ready to Cook</p>
           </div>
-          <div>
-            <img
-              src="https://dao54xqhg9jfa.cloudfront.net/Category/2105beee-e9a9-3efd-4912-2b9657f32d99/original/1604284739.3526--2020-11-0208_08_59--472.jpeg?format=webp"
-              alt="Prawns"
-            />
-            <h4>Prawns</h4>
-          </div>
-          <div>
-            <img
-              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/db686e9b-3609-a719-49a6-435a883a1d59/original/Cold-Cuts_(1).png?format=webp"
-              alt="Cold-Cuts_"
-            />
-            <h4>Cold Cuts</h4>
-          </div>
-          <div>
-            <img
-              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/a73279cf-eb46-a552-c7bd-10361814ae92/original/Spread.png?format=webp"
-              alt="Spread"
-            />
-            <h4>Spreads</h4>
-          </div>
-          <div>
-            <img
-              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/a73279cf-eb46-a552-c7bd-10361814ae92/original/Spread.png?format=webp"
-              alt="Eggs"
-            />
-            <h4>Eggs</h4>
-          </div>
-          <div>
-            <img
-              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/ecf1b530-d791-c509-b17c-43ccaabf9921/original/1.jpg?format=webp"
-              alt="imgbriyani"
-            />
-            <h4>Biryani & Kebab</h4>
-          </div>
-          <div>
-            <img
-              src="https://dao54xqhg9jfa.cloudfront.net/Category/8209cc57-cc85-4e5d-ac6b-4d8f2f36c1ce/original/1604645369.2866--2020-11-0612_19_29--738.jpeg?format=webp"
-              alt="dao"
-            />
-            <h4>Combos</h4>
-          </div>
-          <div>
-            <img
-              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/050c5580-8e16-30f3-213f-f109d86be44a/original/cat-image_(1).jpg?format=webp"
-              alt="Featured Collections"
-            />
-            <h4>Featured Collections</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="premiumdelivery">
-      <div class="deliverychild">
-        <div class="Meatopiatop">
-          <img src="https://www.licious.in/img/rebranding/loyalty_licious_logo.svg" alt="top" />
-          <button class="deliverypremium">JOIN NOW</button>
-        </div>
-        <hr class="divider" />
-        <div class="bottom">
-          <p>Enjoy unlimited free delivery & perks crafted for true meat lovers</p>
-        </div>
-      </div>
-    </div>
-    <div class="productfeatures">
-      <div class="heading">Know the Licious way</div>
-      <div class="featureslist">
-        <div>
-          <p>Premium</p>
-          <p>Produce</p>
         </div>
         <div>
-          <p>World-Class Central</p>
-          <p>Production Unit</p>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/0a8c4f08-15e7-12e5-a696-286cddadf373/original/RTC_(2).png"
+              alt="">
+            <h3>Ready to Cook</h3>
+          </div>
+          <div class="Ready-to-cook">
+            <p>Gourmet Marinades</p>
+            <p>Kebabs & Tandoor</p>
+            <p>Wings</p>
+            <p>Crispy Snacks</p>
+            <p>Burger Patties</p>
+            <p>Combos</p>
+            <p>Biryani</p>
+          </div>
         </div>
         <div>
-          <p>150 Quality</p>
-          <p>Checks</p>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b528b5d9-aae1-8814-99d5-8642e2ee3676/original/Prawns.png"
+              alt="">
+            <h3>Prawns</h3>
+          </div>
+          <div class="Prawns">
+            <p>Small Size</p>
+            <p>Medium Size </p>
+            <p>Large Size</p>
+            <p>Combos</p>
+            <p>Ready to Cook</p>
+          </div>
         </div>
         <div>
-          <p>Delivered Fresh</p>
-          <p>Everyday</p>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/d08157a7-8828-4978-eb3f-3408cfe7d1f9/original/Venus_(1).png"
+              alt="">
+            <h3>Cold Cuts</h3>
+          </div>
+          <div class="Coldcuts">
+            <p>Sausages</p>
+            <p>Frankfurters</p>
+            <p>Lyoners</p>
+            <p>Salamis</p>
+            <p>Combos</p>
+          </div>
         </div>
         <div>
-          <p>Extraordinary</p>
-          <p>Cooking</p>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/066b2145-5678-c1c6-5a05-5e5e53840101/original/Continental-egg-spread.png"
+              alt="">
+            <h3>Spreads</h3>
+          </div>
+          <div class="spreads">
+            <P>Chicken</P>
+            <P>Prawn</P>
+            <P>Eggs</P>
+            <P>Combos</P>
+          </div>
         </div>
-      </div>
-      <button>Discover Now ᐯ</button>
-    </div>
-    <div class="offerimage">
-      <div class="image">
-        <a href="./topnavbar.html"
-          ><img
-            src="https://dao54xqhg9jfa.cloudfront.net/OMS-StaticBanner/2009d707-8f4d-528b-6df4-c75c9557f4d3/original/static-bank-units-July-web_(15).jpg?format=webp"
-            alt="offerbox"
-        /></a>
-      </div>
-    </div>
-    <div class="BestSellerparent">
-      <div class="heading"><h2>Best Sellers</h2></div>
-      <div class="Bestsellersparent">
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/54771c04-5aae-094d-8739-b22d09ab284e/original/Eggs.png"
+              alt="">
+            <h3>Eggs</h3>
+          </div>
+          <div class="eggs">
+            <p>Classic Eggs</p>
+            <p>Speciality Eggs</p>
+            <p>Combos</p>
+            <p>Spreads</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/8f6c3a69-7867-05d5-9367-ed091bdf3c61/original/hyd-chicken.png"
+              alt="">
+            <h3>Biryani & Kebab</h3>
+          </div>
+          <div class="Biryani-Kebab">
+            <p>Biryani</p>
+            <p>Kebab</p>
+            <p>Tandoor</p>
+            <p>Combos</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b8169e6d-59ae-ba6f-f839-ec0883a9742e/original/Combo2.png"
+              alt="">
+            <h3>Combos</h3>
+          </div>
+          <div class="Combos">
 
-        <div class="childdiv">
-            <img src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp" alt="Chicken">
-            <h3>Chicken Curry Cut-Small Pieces</h3>
-            <p>Small pieces of bone-in & boneless chicken for curries</p>
-            <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
-            <p>MRP: <span>&#x20b9;165</span></p>
+          </div>
         </div>
-        <div class="childdiv">
-            <img src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp" alt="Chicken">
-            <h3>Chicken Curry Cut-Small Pieces</h3>
-            <p>Small pieces of bone-in & boneless chicken for curries</p>
-            <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
-            <p>MRP: <span>&#x20b9;165</span></p>
-        </div>
-        <div class="childdiv">
-            <img src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp" alt="Chicken">
-            <h3>Chicken Curry Cut-Small Pieces</h3>
-            <p>Small pieces of bone-in & boneless chicken for curries</p>
-            <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
-            <p>MRP: <span>&#x20b9;165</span></p>
-        </div>
-        <div class="childdiv">
-            <img src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp" alt="Chicken">
-            <h3>Chicken Curry Cut-Small Pieces</h3>
-            <p>Small pieces of bone-in & boneless chicken for curries</p>
-            <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
-            <p>MRP: <span>&#x20b9;165</span></p>
-        </div>
-        <div class="childdiv">
-            <img src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp" alt="Chicken">
-            <h3>Chicken Curry Cut-Small Pieces</h3>
-            <p>Small pieces of bone-in & boneless chicken for curries</p>
-            <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
-            <p>MRP: <span>&#x20b9;165</span></p>
-        </div>
-        <div class="childdiv">
-            <img src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp" alt="Chicken">
-            <h3>Chicken Curry Cut-Small Pieces</h3>
-            <p>Small pieces of bone-in & boneless chicken for curries</p>
-            <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
-            <p>MRP: <span>&#x20b9;165</span></p>
-        </div>
-        <div class="childdiv">
-            <img src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp" alt="Chicken">
-            <h3>Chicken Curry Cut-Small Pieces</h3>
-            <p>Small pieces of bone-in & boneless chicken for curries</p>
-            <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
-            <div class="price"><p>MRP: <span>&#x20b9;165</span></p><button>Add to Cart</button></div>
-            
-        </div>
-        <div class="childdiv">
-            <img src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp" alt="Chicken">
-            <h3>Chicken Curry Cut-Small Pieces</h3>
-            <p>Small pieces of bone-in & boneless chicken for curries</p>
-            <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
-
-            <div class="price"> <p>MRP: <span>&#x20b9;165</span></p><button>Add to Cart</button></div>
-           
-        </div>
-        <div class="childdiv">
-            <img src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp" alt="Chicken">
-            <h3>Chicken Curry Cut-Small Pieces</h3>
-            <p>Small pieces of bone-in & boneless chicken for curries</p>
-            <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
-            <div class="price"><p>MRP: <span>&#x20b9;165</span></p><button>Add to Cart</button></div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/804e2c47-aa87-e548-8d19-789b1fccb8bb/original/GFD.png"
+              alt="">
+            <h3>Featured Collections</h3>
+          </div>
+          <div class="Geatured-Collections">
+            <p>Bestsellers</p>
+            <p>Under 149 Store</p>
+            <p>Fish Starters</p>
+          </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+  <div class="banner">
+    <img src="https://d2407na1z3fc0t.cloudfront.net/Slider/banner_62c7158f31f30" alt="banner" />
+    <button id="firstbutton">></button>
+    <button>
+      < </button>
+  </div>
+  <div class="categoriesshop">
+    <div class="categorieschild">
+      <div class="heading">
+        <h2>Shop by categories</h2>
+        <p>Freshest meats just for you</p>
+      </div>
+      <div class="categoriesbox">
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/539819fa-f8f5-6148-d407-95522fa17a28/original/Todays-deal21.png"
+            alt="Todaysdeal" />
+          <h4>Today's Deals</h4>
+        </div>
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/479a9750-d9a2-33ff-0693-3044a9dcae91/original/Chicken.png"
+            alt="Chicken" />
+          <h4>Chicken</h4>
+        </div>
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/46494180-ff34-2236-4240-da12222c4d23/original/Fish___Seafood.png"
+            alt="Chicken" />
+          <h4>Fish & Seafood</h4>
+        </div>
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/952cc910-319c-0b5d-fa34-373f05f0917a/original/Mutton.png"
+            alt="mutton" />
+          <h4>Mutton</h4>
+        </div>
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/1db15fd5-a5d3-b275-1579-2e3b2edc0d30/original/RTC.png?format=webp"
+            alt="Ready to cook" />
+          <h4>Ready to Cook</h4>
+        </div>
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/Category/2105beee-e9a9-3efd-4912-2b9657f32d99/original/1604284739.3526--2020-11-0208_08_59--472.jpeg?format=webp"
+            alt="Prawns" />
+          <h4>Prawns</h4>
+        </div>
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/db686e9b-3609-a719-49a6-435a883a1d59/original/Cold-Cuts_(1).png?format=webp"
+            alt="Cold-Cuts_" />
+          <h4>Cold Cuts</h4>
+        </div>
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/a73279cf-eb46-a552-c7bd-10361814ae92/original/Spread.png?format=webp"
+            alt="Spread" />
+          <h4>Spreads</h4>
+        </div>
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/a73279cf-eb46-a552-c7bd-10361814ae92/original/Spread.png?format=webp"
+            alt="Eggs" />
+          <h4>Eggs</h4>
+        </div>
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/ecf1b530-d791-c509-b17c-43ccaabf9921/original/1.jpg?format=webp"
+            alt="imgbriyani" />
+          <h4>Biryani & Kebab</h4>
+        </div>
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/Category/8209cc57-cc85-4e5d-ac6b-4d8f2f36c1ce/original/1604645369.2866--2020-11-0612_19_29--738.jpeg?format=webp"
+            alt="dao" />
+          <h4>Combos</h4>
+        </div>
+        <div>
+          <img
+            src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/050c5580-8e16-30f3-213f-f109d86be44a/original/cat-image_(1).jpg?format=webp"
+            alt="Featured Collections" />
+          <h4>Featured Collections</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="premiumdelivery">
+    <div class="deliverychild">
+      <div class="Meatopiatop">
+        <img src="https://www.licious.in/img/rebranding/loyalty_licious_logo.svg" alt="top" />
+        <button class="deliverypremium">JOIN NOW</button>
+      </div>
+      <div class="bottom">
+        <p>Enjoy unlimited free delivery & perks crafted for true meat lovers</p>
+      </div>
+    </div>
+  </div>
+  <div class="productfeatures">
+    <div class="heading">Know the Licious way</div>
+    <div class="featureslist">
+      <div>
+        <p>Premium</p>
+        <p>Produce</p>
+      </div>
+      <div>
+        <p>World-Class Central</p>
+        <p>Production Unit</p>
+      </div>
+      <div>
+        <p>150 Quality</p>
+        <p>Checks</p>
+      </div>
+      <div>
+        <p>Delivered Fresh</p>
+        <p>Everyday</p>
+      </div>
+      <div>
+        <p>Extraordinary</p>
+        <p>Cooking</p>
+      </div>
+    </div>
+    <button>Discover Now <span>ᐯ</span></button>
+  </div>
+  <div class="offerimage">
+    <div class="image">
+      <a href="./topnavbar.html"><img
+          src="https://dao54xqhg9jfa.cloudfront.net/OMS-StaticBanner/2009d707-8f4d-528b-6df4-c75c9557f4d3/original/static-bank-units-July-web_(15).jpg?format=webp"
+          alt="offerbox" /></a>
+    </div>
+  </div>
+  <!-- <div class="referralgift">
+
+    <div class="refferalparent">
+      <img src="https://d2407na1z3fc0t.cloudfront.net/Banner/rebranding_referral_banner_icon.png" alt="img">&nbsp;
+      <h1>Invite friends and get Rs200 per referral </h1>&nbsp;
+      <h1>></h1>
+    </div>
+  </div> -->
+  <div class="rewardparentdiv">
+    <div class="loginreward">
+      <div class="leftsection">
+        <div>
+          <img src="https://www.licious.in/img/rebranding/rewards/rewards_icon.svg" alt="">
+        </div>
+        <div>
+          <h5>My Rewards</h5>
+          <p>Place an order and win your next reward!</p>
+        </div>
+      </div>
+      <div class="rightsection">
+        <p>CLICK TO VIEW <SPAN><img src="https://www.licious.in/img/rebranding/arrow.png" alt=""></SPAN></p>
+      </div>
+      
+    </div>
+  </div>
+  <div class="Explorecategory">
+   <div class="exploreparent">
+    <h1>Explore by category</h1>
+   
+    <div class="divcontainer">
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/Category/782aa584-4978-2e46-e38a-4aff56f10800/original/1603885852.4258--2020-10-2817_20_52--738.jpeg?format=webp" alt="">
+        <h2>Today's Deals</h2>
+      </div>
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/840ded78-a6e8-c768-4069-9abde900b5ea/original/Chicken_(1).png?format=webp" alt="">
+        <h2>Chicken</h2>
+      </div>
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b297aada-cd28-8357-f0e1-2ae25d3dd1ee/original/FishSeafood.png?format=webp" alt="">
+        <h2>Fish & Seafood</h2>
+      </div>
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b4b90104-3976-ee97-7cdd-812a4916c0e6/original/Mutton.jpg?format=webp" alt="">
+        <h2>Mutton</h2>
+      </div>
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/1db15fd5-a5d3-b275-1579-2e3b2edc0d30/original/RTC.png?format=webp" alt="">
+        <h2>Ready to Cook</h2>
+      </div>
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/Category/2105beee-e9a9-3efd-4912-2b9657f32d99/original/1604284739.3526--2020-11-0208_08_59--472.jpeg?format=webp" alt="">
+        <h2>Prawns</h2>
+      </div>
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/db686e9b-3609-a719-49a6-435a883a1d59/original/Cold-Cuts_(1).png?format=webp" alt="">
+        <h2>Cold Cuts</h2>
+      </div>
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/a73279cf-eb46-a552-c7bd-10361814ae92/original/Spread.png?format=webp" alt="">
+        <h2>Spreads</h2>
+      </div>
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/Category/bdfca08e-566b-4439-0aac-9c100704cb0b/original/1603646527.5457--2020-10-2522_52_07--738.jpeg?format=webp" alt="">
+        <h2>Eggs</h2>
+      </div>
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/ecf1b530-d791-c509-b17c-43ccaabf9921/original/1.jpg?format=webp" alt="">
+        <h2>Biryani & Kebab</h2>
+      </div>
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/Category/8209cc57-cc85-4e5d-ac6b-4d8f2f36c1ce/original/1604645369.2866--2020-11-0612_19_29--738.jpeg?format=webp" alt="">
+        <h2>Combos</h2>
+      </div>
+      <div>
+        <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/050c5580-8e16-30f3-213f-f109d86be44a/original/cat-image_(1).jpg?format=webp" alt="">
+        <h2>Featured Collections</h2>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- <div class="BestSellerparent">
+    <div class="heading">
+      <h2>Best Sellers</h2>
+    </div>
+    <div class="Bestsellersparent">
+
+      <div class="childdiv">
+        <img
+          src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp"
+          alt="Chicken">
+        <h3>Chicken Curry Cut-Small Pieces</h3>
+        <p>Small pieces of bone-in & boneless chicken for curries</p>
+        <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
+        <p>MRP: <span>&#x20b9;165</span></p>
+      </div>
+      <div class="childdiv">
+        <img
+          src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp"
+          alt="Chicken">
+        <h3>Chicken Curry Cut-Small Pieces</h3>
+        <p>Small pieces of bone-in & boneless chicken for curries</p>
+        <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
+        <p>MRP: <span>&#x20b9;165</span></p>
+      </div>
+      <div class="childdiv">
+        <img
+          src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp"
+          alt="Chicken">
+        <h3>Chicken Curry Cut-Small Pieces</h3>
+        <p>Small pieces of bone-in & boneless chicken for curries</p>
+        <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
+        <p>MRP: <span>&#x20b9;165</span></p>
+      </div>
+      <div class="childdiv">
+        <img
+          src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp"
+          alt="Chicken">
+        <h3>Chicken Curry Cut-Small Pieces</h3>
+        <p>Small pieces of bone-in & boneless chicken for curries</p>
+        <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
+        <p>MRP: <span>&#x20b9;165</span></p>
+      </div>
+      <div class="childdiv">
+        <img
+          src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp"
+          alt="Chicken">
+        <h3>Chicken Curry Cut-Small Pieces</h3>
+        <p>Small pieces of bone-in & boneless chicken for curries</p>
+        <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
+        <p>MRP: <span>&#x20b9;165</span></p>
+      </div>
+      <div class="childdiv">
+        <img
+          src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp"
+          alt="Chicken">
+        <h3>Chicken Curry Cut-Small Pieces</h3>
+        <p>Small pieces of bone-in & boneless chicken for curries</p>
+        <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
+        <p>MRP: <span>&#x20b9;165</span></p>
+      </div>
+      <div class="childdiv">
+        <img
+          src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp"
+          alt="Chicken">
+        <h3>Chicken Curry Cut-Small Pieces</h3>
+        <p>Small pieces of bone-in & boneless chicken for curries</p>
+        <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
+        <div class="price">
+          <p>MRP: <span>&#x20b9;165</span></p><button>Add to Cart</button>
+        </div>
+
+      </div>
+      <div class="childdiv">
+        <img
+          src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp"
+          alt="Chicken">
+        <h3>Chicken Curry Cut-Small Pieces</h3>
+        <p>Small pieces of bone-in & boneless chicken for curries</p>
+        <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
+
+        <div class="price">
+          <p>MRP: <span>&#x20b9;165</span></p><button>Add to Cart</button>
+        </div>
+
+      </div>
+      <div class="childdiv">
+        <img
+          src="https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/b09b43a2-f520-264f-1a29-f47cb0e4fad0/original/1584770326.4209--2020-03-2111_28_46--738.jpeg?format=webp"
+          alt="Chicken">
+        <h3>Chicken Curry Cut-Small Pieces</h3>
+        <p>Small pieces of bone-in & boneless chicken for curries</p>
+        <div><span>Net wt: 500gms </span> <span></span> Gross: 526gms</div>
+        <div class="price">
+          <p>MRP: <span>&#x20b9;165</span></p><button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+  </div>
+</body>
 </html>
+<script src="licious.js"></script>
