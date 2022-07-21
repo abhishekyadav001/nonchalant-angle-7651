@@ -164,20 +164,16 @@ body {
     gap: 20px;
     padding-right: 10px;
     padding-left: 10px;
-  }
-
-  .categoriesbox>div {
     text-align: center;
   }
 
   .categoriesbox>div>img {
     width: 100%;
-    height: auto;
+    height: 65%;
+    border-radius: 25px;
   }
 
-  .categoriesbox>div>img:hover {
-    transform: scale 2px;
-  }
+  
 
   .premiumdelivery {
     margin-top: 50px;
@@ -199,6 +195,13 @@ body {
     display: flex;
     justify-content: space-between;
     height: 70%;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #ccb076;
+  }
+
+  .deliverychild>.bottom{
+    height: 10%;
+    font-size: 15px;
   }
 
   .Meatopiatop>.deliverypremium {
@@ -207,59 +210,77 @@ body {
     border-radius: 3px;
     padding: 7px;
     color: white;
+    font-weight: bold;
+   
   }
 
-  .premiumdelivery {
-    width: 100%;
-  }
 
-  .productfeatures {
-    padding-left: 10px;
-  }
 
+ 
   .featureslist {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    border: 1px dotted grey;
+    border: 2px dotted grey;
   }
 
   .featureslist>div {
     border-right: 1px solid wheat;
     width: 20%;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
   }
 
   .featureslist>div:last-child {
     border-left: 1px solid wheat;
     border-right: 0px;
   }
+  .productfeatures {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+  }
 
   .productfeatures>.heading {
+    
     text-align: center;
-
-    background-color: white;
-    filter: alpha(opacity=70);
-
+    color:#d11243;
+   font-size: 30px;
     display: block;
     width: fit-content;
     margin: auto;
-    margin-bottom: -12px;
+    margin-bottom: -2px;
   }
+.productfeatures button{
 
+  border:2px solid #d11243;
+  color: #d11243;
+  padding: 10px 20px;
+  font-weight: bolder;
+  border-radius: 7px;
+  margin: auto;
+ margin-top: -20px;
+}
   .offerimage {
-    width: 100%;
+    width: 80%;
     margin-top: 50px;
   }
 
   .offerimage>.image {
     width: 50%;
-    margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
   }
 
   .referralgift {
     display: flex;
     align-items: center;
-
     background-color: #f1a94b;
     color: white;
   }
@@ -334,3 +355,54 @@ body {
   .headpoints>div>div+div>p{
     border-bottom: 1px solid rgb(218, 218, 218);
   }
+
+.rewardparentdiv{
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  background-color: #fae4e8;
+}
+.loginreward{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+
+.leftsection{
+  display: flex;
+  flex-direction: r;
+  border: 1px solid blue;
+  padding: 10px;
+}
+.leftsection>div img{
+border: 1px solid black;
+align-items: center;
+}
+
+.Explorecategory{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.exploreparent{
+  display: flex;
+  flex-direction: column;
+}
+
+.divcontainer{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:30px;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+.divcontainer>div img{
+  width: 100%;
+  height: 70%;
+  border-radius: 30px;
+}
+.divcontainer>div h2{
+  opacity: 0.7;
+}
