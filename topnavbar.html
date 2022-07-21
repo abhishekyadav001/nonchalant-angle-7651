@@ -5,352 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Order Meat Online - Buy Fresh Meat</title>
+  <link rel="stylesheet" href="licious.css">
 </head>
-<style>
-  body {
-
-    background-color: #f7f6f6;
-  }
-
-  .navbarparent {
-    align-items: center;
-    background-color: white;
-    width: 100%;
-    margin-top: 50px;
-
-    height: auto;
-    position: sticky;
-    top: 0;
-    padding: 5px;
-    z-index: 110;
-    font-size: 18px;
-  }
-
-  .navbar {
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    width: 70%;
-    padding: 10px;
-    position: relative;
-  }
-
-  .logodiv {
-    width: auto;
-    height: 100%;
-  }
-
-  .logodiv>img {
-    width: 100px;
-    height: 100%;
-  }
-
-  .location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .locologo>img {
-    width: 29px;
-    height: 30px;
-  }
-
-  .paragraph>p {
-    margin: 5px;
-  }
-
-  .searchbar {
-    position: relative;
-    height: 40px;
-  }
-
-  .searchbar>input {
-    padding: 0px 15px;
-    height: 100%;
-    width: 400px;
-    outline: none;
-  }
-
-  .searchbar>#submitbutton {
-    position: absolute;
-    right: 10px;
-    top: 25%;
-  }
-
-  .categories>div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .categories>img {
-    width: 50%;
-    height: 50%;
-  }
-
-  .categories>p:hover {
-    color: #d11243;
-  }
-
-  .login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .login>p:hover {
-    color: #d11243;
-  }
-
-  .cart {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .cart p:hover {
-    color: #d11243;
-  }
-
-  .banner {
-    width: 100%;
-    position: relative;
-    margin: auto;
-    margin-top: 1px;
-  }
-
-  .banner>img {
-    width: 101%;
-    margin: auto;
-  }
-
-  .banner button {
-    position: absolute;
-
-    top: 40%;
-    padding: 10px 20px;
-    border: 0;
-    border-radius: 50%;
-    font-size: 70px;
-  }
-
-  .banner>#firstbutton:hover {
-    background-color: #ffff;
-  }
-
-  .banner>button:nth-child(2) {
-    right: -5px;
-  }
-
-  .categoriesshop {
-    width: 100%;
-    margin: auto;
-  }
-
-  .categorieschild {
-    width: 70%;
-    margin: auto;
-  }
-
-  .heading>h2 {
-    margin: 15px 0px 5px 6px;
-  }
-
-  .heading>p {
-    margin: 0px 0px 10px 6px;
-    opacity: 0.6;
-  }
-
-  .categoriesbox {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-
-  .categoriesbox>div {
-    text-align: center;
-  }
-
-  .categoriesbox>div>img {
-    width: 100%;
-    height: auto;
-  }
-
-  .categoriesbox>div>img:hover {
-    transform: scale 2px;
-  }
-
-  .premiumdelivery {
-    margin-top: 50px;
-    width: 100%;
-    margin-bottom: 50px;
-  }
-
-  .deliverychild {
-    width: 50%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #fedb92;
-  }
-
-  .deliverychild>.Meatopiatop {
-    display: flex;
-    justify-content: space-between;
-    height: 70%;
-  }
-
-  .Meatopiatop>.deliverypremium {
-    background-color: #d11243;
-    border: 0;
-    border-radius: 3px;
-    padding: 7px;
-    color: white;
-  }
-
-  .premiumdelivery {
-    width: 100%;
-  }
-
-  .productfeatures {
-    padding-left: 10px;
-  }
-
-  .featureslist {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    border: 1px dotted grey;
-  }
-
-  .featureslist>div {
-    border-right: 1px solid wheat;
-    width: 20%;
-  }
-
-  .featureslist>div:last-child {
-    border-left: 1px solid wheat;
-    border-right: 0px;
-  }
-
-  .productfeatures>.heading {
-    text-align: center;
-
-    background-color: white;
-    filter: alpha(opacity=70);
-
-    display: block;
-    width: fit-content;
-    margin: auto;
-    margin-bottom: -12px;
-  }
-
-  .offerimage {
-    width: 100%;
-    margin-top: 50px;
-  }
-
-  .offerimage>.image {
-    width: 50%;
-    margin: auto;
-  }
-
-  .referralgift {
-    display: flex;
-    align-items: center;
-
-    background-color: #f1a94b;
-    color: white;
-  }
-
-
-
-  .BestSellerparent>div {
-    display: flex;
-    justify-content: space-between;
-    width: 15%;
-  }
-
-  .categoriestab {
-
-    position: absolute;
-    top: 350px;
-    display: flex;
-    background-color: #ffffff;
-  }
-
-  .headpoints {
-    position: absolute;
-    top: 50px;
-    /* margin-top: 550px; */
-    flex-direction: column;
-    padding: 0px;
-    display: none;
-
-  }
-
-  .headpoints>div .menu {
-    display: flex;
-    align-items: center;
-    border: 0px;
-    border-bottom: 0.5px solid rgb(233, 225, 225);
-    background-color: rgba(255, 255, 255, 0.428);
-  }
-
-  .headpoints>div:hover {
-    background-color: #f1f1f1;
-    font-weight: bolder;
-  }
-
-  .headpoints>div img {
-    width: 30px;
-    height: 30px;
-    margin-left: 7px;
-  }
-
-  .headpoints .menu>h3 {
-    font-size: 15px;
-    margin-left: 15px;
-    opacity: 0.6;
-  }
-
-  .headpoints>div:hover .menu>h3 {
-    opacity: 1;
-  }
-
-
-
-  .headpoints>div:nth-child(2):hover {
-    display: block;
-
-  }
-
-  .headpoints>div>div+div {
-    position: absolute;
-    left: 100%;
-    top: 0;
-    width: 200px;
-    height: 100%;
-    line-height: 2;
-    font-size: 0.9em;
-    font-size: 20px;
-    background-color: #f1f1f1;
-    display: none;
-  }
-
-  .headpoints>div>div:hover+div {
-    display: block;
-  }
-</style>
 
 <body>
   <div class="instruction"></div>
@@ -378,185 +34,6 @@
           <img src="https://www.licious.in/img/rebranding/category-dropdown-icon.svg" alt="categories" /> &nbsp;&nbsp;
           <span>Categories</span>
         </div>
-        <!-- <div class="headpoints">
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/539819fa-f8f5-6148-d407-95522fa17a28/original/Todays-deal21.png"
-                alt="">
-              <h3>Today's Deals</h3>
-            </div>
-
-            <div class="Chicken">
-              <p>Curry Cuts</p>
-              <p>Boneless & Mince</p>
-              <p>Speciality Cuts</p>
-              <p>Offals</p>
-              <p>Combos</p>
-              <p>Ready to Cook</p>
-            </div>
-          </div>
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/479a9750-d9a2-33ff-0693-3044a9dcae91/original/Chicken.png"
-                alt="">
-              <h3>chicken</h3>
-            </div>
-            <div class="Chicken">
-              <p>Curry Cuts</p>
-              <p>Boneless & Mince</p>
-              <p>Speciality Cuts</p>
-              <p>Offals</p>
-              <p>Combos</p>
-              <p>Ready to Cook</p>
-            </div>
-          </div>
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/46494180-ff34-2236-4240-da12222c4d23/original/Fish___Seafood.png"
-                alt="">
-              <h3>Fish & Seafood</h3>
-            </div>
-            <div class="Fish">
-              <p>Freshwater</p>
-              <p>Seawater</p>
-              <p>Ready to Cook</p>
-              <p>Crab</p>
-            </div>
-          </div>
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/952cc910-319c-0b5d-fa34-373f05f0917a/original/Mutton.png"
-                alt="">
-              <h3>Mutton</h3>
-            </div>
-            <div class="Mutton">
-              <p>Curry Cuts</p>
-              <p>Boneless & Mince</p>
-              <p>Speciality Cuts </p>
-              <p>Offals </p>
-              <p>Combos</p>
-              <p>Ready to Cook</p>
-            </div>
-          </div>
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/0a8c4f08-15e7-12e5-a696-286cddadf373/original/RTC_(2).png"
-                alt="">
-              <h3>Ready to Cook</h3>
-            </div>
-            <div class="Ready-to-cook">
-              <p>Gourmet Marinades</p>
-              <p>Kebabs & Tandoor</p>
-              <p>Wings</p>
-              <p>Crispy Snacks</p>
-              <p>Burger Patties</p>
-              <p>Combos</p>
-              <p>Biryani</p>
-            </div>
-          </div>
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b528b5d9-aae1-8814-99d5-8642e2ee3676/original/Prawns.png"
-                alt="">
-              <h3>Prawns</h3>
-            </div>
-            <div class="Prawns">
-              <p>Small Size</p>
-              <p>Medium Size </p>
-              <p>Large Size</p>
-              <p>Combos</p>
-              <p>Ready to Cook</p>
-            </div>
-          </div>
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/d08157a7-8828-4978-eb3f-3408cfe7d1f9/original/Venus_(1).png"
-                alt="">
-              <h3>Cold Cuts</h3>
-            </div>
-            <div class="Coldcuts">
-              <p>Sausages</p>
-              <p>Frankfurters</p>
-              <p>Lyoners</p>
-              <p>Salamis</p>
-              <p>Combos</p>
-            </div>
-          </div>
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/066b2145-5678-c1c6-5a05-5e5e53840101/original/Continental-egg-spread.png"
-                alt="">
-              <h3>Spreads</h3>
-            </div>
-            <div class="spreads">
-              <P>Chicken</P>
-              <P>Prawn</P>
-              <P>Eggs</P>
-              <P>Combos</P>
-            </div>
-          </div>
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/54771c04-5aae-094d-8739-b22d09ab284e/original/Eggs.png"
-                alt="">
-              <h3>Eggs</h3>
-            </div>
-            <div class="eggs">
-              <p>Classic Eggs</p>
-              <p>Speciality Eggs</p>
-              <p>Combos</p>
-              <p>Spreads</p>
-            </div>
-          </div>
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/8f6c3a69-7867-05d5-9367-ed091bdf3c61/original/hyd-chicken.png"
-                alt="">
-              <h3>Biryani & Kebab</h3>
-            </div>
-            <div class="Biryani-Kebab">
-              <p>Biryani</p>
-              <p>Kebab</p>
-              <p>Tandoor</p>
-              <p>Combos</p>
-            </div>
-          </div>
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b8169e6d-59ae-ba6f-f839-ec0883a9742e/original/Combo2.png"
-                alt="">
-              <h3>Combos</h3>
-            </div>
-            <div class="Combos">
-
-            </div>
-          </div>
-          <div>
-            <div class="menu">
-              <img
-                src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/804e2c47-aa87-e548-8d19-789b1fccb8bb/original/GFD.png"
-                alt="">
-              <h3>Featured Collections</h3>
-            </div>
-            <div class="Geatured-Collections">
-              <p>Bestsellers</p>
-              <p>Under 149 Store</p>
-              <p>Fish Starters</p>
-            </div>
-          </div>
-        </div>  -->
-
       </div>
       <div class="login">
         <img src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="login" />&nbsp;&nbsp;
@@ -566,6 +43,185 @@
         <div><img src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="cartlogo" />&nbsp;&nbsp;</div>
         <div>
           <p>Cart</p>
+        </div>
+      </div>
+
+      <div class="headpoints">
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/539819fa-f8f5-6148-d407-95522fa17a28/original/Todays-deal21.png"
+              alt="">
+            <h3>Today's Deals</h3>
+          </div>
+
+          <div class="Chicken">
+            <p>Curry Cuts</p>
+            <p>Boneless & Mince</p>
+            <p>Speciality Cuts</p>
+            <p>Offals</p>
+            <p>Combos</p>
+            <p>Ready to Cook</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/479a9750-d9a2-33ff-0693-3044a9dcae91/original/Chicken.png"
+              alt="">
+            <h3>chicken</h3>
+          </div>
+          <div class="Chicken">
+            <p>Curry Cuts</p>
+            <p>Boneless & Mince</p>
+            <p>Speciality Cuts</p>
+            <p>Offals</p>
+            <p>Combos</p>
+            <p>Ready to Cook</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/46494180-ff34-2236-4240-da12222c4d23/original/Fish___Seafood.png"
+              alt="">
+            <h3>Fish & Seafood</h3>
+          </div>
+          <div class="Fish">
+            <p>Freshwater</p>
+            <p>Seawater</p>
+            <p>Ready to Cook</p>
+            <p>Crab</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/952cc910-319c-0b5d-fa34-373f05f0917a/original/Mutton.png"
+              alt="">
+            <h3>Mutton</h3>
+          </div>
+          <div class="Mutton">
+            <p>Curry Cuts</p>
+            <p>Boneless & Mince</p>
+            <p>Speciality Cuts </p>
+            <p>Offals </p>
+            <p>Combos</p>
+            <p>Ready to Cook</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/0a8c4f08-15e7-12e5-a696-286cddadf373/original/RTC_(2).png"
+              alt="">
+            <h3>Ready to Cook</h3>
+          </div>
+          <div class="Ready-to-cook">
+            <p>Gourmet Marinades</p>
+            <p>Kebabs & Tandoor</p>
+            <p>Wings</p>
+            <p>Crispy Snacks</p>
+            <p>Burger Patties</p>
+            <p>Combos</p>
+            <p>Biryani</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b528b5d9-aae1-8814-99d5-8642e2ee3676/original/Prawns.png"
+              alt="">
+            <h3>Prawns</h3>
+          </div>
+          <div class="Prawns">
+            <p>Small Size</p>
+            <p>Medium Size </p>
+            <p>Large Size</p>
+            <p>Combos</p>
+            <p>Ready to Cook</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/d08157a7-8828-4978-eb3f-3408cfe7d1f9/original/Venus_(1).png"
+              alt="">
+            <h3>Cold Cuts</h3>
+          </div>
+          <div class="Coldcuts">
+            <p>Sausages</p>
+            <p>Frankfurters</p>
+            <p>Lyoners</p>
+            <p>Salamis</p>
+            <p>Combos</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/066b2145-5678-c1c6-5a05-5e5e53840101/original/Continental-egg-spread.png"
+              alt="">
+            <h3>Spreads</h3>
+          </div>
+          <div class="spreads">
+            <P>Chicken</P>
+            <P>Prawn</P>
+            <P>Eggs</P>
+            <P>Combos</P>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/54771c04-5aae-094d-8739-b22d09ab284e/original/Eggs.png"
+              alt="">
+            <h3>Eggs</h3>
+          </div>
+          <div class="eggs">
+            <p>Classic Eggs</p>
+            <p>Speciality Eggs</p>
+            <p>Combos</p>
+            <p>Spreads</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/8f6c3a69-7867-05d5-9367-ed091bdf3c61/original/hyd-chicken.png"
+              alt="">
+            <h3>Biryani & Kebab</h3>
+          </div>
+          <div class="Biryani-Kebab">
+            <p>Biryani</p>
+            <p>Kebab</p>
+            <p>Tandoor</p>
+            <p>Combos</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b8169e6d-59ae-ba6f-f839-ec0883a9742e/original/Combo2.png"
+              alt="">
+            <h3>Combos</h3>
+          </div>
+          <div class="Combos">
+
+          </div>
+        </div>
+        <div>
+          <div class="menu">
+            <img
+              src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/804e2c47-aa87-e548-8d19-789b1fccb8bb/original/GFD.png"
+              alt="">
+            <h3>Featured Collections</h3>
+          </div>
+          <div class="Geatured-Collections">
+            <p>Bestsellers</p>
+            <p>Under 149 Store</p>
+            <p>Fish Starters</p>
+          </div>
         </div>
       </div>
     </div>
@@ -710,7 +366,7 @@
       <h1>></h1>
     </div>
   </div>
-  <div class="BestSellerparent">
+  <!-- <div class="BestSellerparent">
     <div class="heading">
       <h2>Best Sellers</h2>
     </div>
@@ -807,9 +463,10 @@
         </div>
       </div>
     </div>
-  </div>
-  
+  </div> -->
+
 
   </div>
 </body>
 </html>
+<script src="licious.js"></script>
