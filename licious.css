@@ -1,5 +1,5 @@
 body {
-
+  position: relative;
   background-color: #f7f6f6;
 }
 
@@ -481,7 +481,6 @@ gap: 0px;
 }
 .blogparent{
 display: flex;
-;
 border: 1px solid blue;
 width: fit-content;
 height: fit-content;
@@ -502,13 +501,18 @@ margin: auto;
 
 
 .loginpage{
+  position: absolute;
+  right: 28px;
+  top: 80px;
   background-image: url(https://www.licious.in/img/rebranding/user-login.png);
-  width: 70%;
-  height: 800px;
+  width: 25%;
+  height: 85vh;
+  display: none;
 }
 .loginpage>div>img{
   margin-top: 50px;
-  width: 50%;
+  margin-left: 50px;
+  width: 33%;
 }
 .form{
   background-color: white;
@@ -517,15 +521,14 @@ margin: auto;
   height: 300px;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-top: 400px;
-}
-.form{
-  border: 1px solid;
+  margin-top: 387.5px;
+  padding: 15px;
 }
 .form>form>.head{
   font-size: 30px;
 }
 .form>form>input{
+  margin: auto;
 padding: 10px 20px;
 margin-top: 10px;
 width: 90%;
@@ -533,7 +536,16 @@ border: 0;
 border-bottom:1px solid ;
 margin-bottom: 10px;
 opacity: 0.8;
-
+letter-spacing: 2px;
+font-size: 25px;
+text-align: center;
+}
+.form>form>.submitbtn{
+  width: fit-content;
+  padding: 10px 30px;
+  border: 1px solid;
+  display: block;
+  margin: auto;
 }
 .form>form>p{
   font-size: 19px;
