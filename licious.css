@@ -171,9 +171,21 @@ body {
     width: 100%;
     height: 65%;
     border-radius: 25px;
+  transition: .2s;
   }
-
-  
+  .categoriesbox>div>h4{
+    opacity: 0.7;
+  }
+  .categoriesbox>div>img:hover{
+    transform: scale(1.2);
+  }
+  .categoriesbox>div:hover{
+    cursor: pointer;
+  }
+  .categoriesbox>div:hover h4{
+    color: #d11243;
+    opacity: 1;
+  }
 
   .premiumdelivery {
     margin-top: 50px;
@@ -380,29 +392,52 @@ border: 1px solid black;
 align-items: center;
 }
 
-.Explorecategory{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.exploreparent{
-  display: flex;
-  flex-direction: column;
-}
 
+.exploreparent{
+ display: flex;
+ flex-direction: column;
+
+ width: fit-content;
+ margin: auto;
+ margin-top: 50px;
+ 
+ width: 80%;
+}
+.Explorecategory{
+width: 100%;
+
+}
+.exploreparent>.explorehead{
+  font-size: 30px;
+  font-weight: bolder;
+}
 .divcontainer{
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap:30px;
-  width: 70%;
+  width: 100%;
   margin: auto;
+ 
   text-align: center;
+ 
+}
+.divcontainer>div{
+  margin: auto;
 }
 .divcontainer>div img{
-  width: 100%;
-  height: 70%;
+width:350px;
+height:300px;
   border-radius: 30px;
+  transition: .1s;
+}
+.divcontainer>div img:hover{
+  transform:scale(1.1);
 }
 .divcontainer>div h2{
   opacity: 0.7;
 }
+.divcontainer>div:hover h2{
+  color: #d11243;
+  opacity: 1;
+}
+
