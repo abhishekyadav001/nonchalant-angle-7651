@@ -92,6 +92,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .login>p:hover {
@@ -462,29 +463,7 @@ cursor: pointer;
 }
 
 
-.blogcontainer{
-  width: 80%;
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: 0px;
-}
-.blogcontainer div{
-  width: 50%;
-  height: auto;
-  border: 1px solid;
-}
-.blogcontainer>a>div img{
-  width: 100%;
-}
-.blog{
-  width: 100%;
-}
-.blogparent{
-display: flex;
-border: 1px solid blue;
-width: fit-content;
-height: fit-content;
-}
+
 
 
 .bottombanner{
@@ -543,9 +522,18 @@ text-align: center;
 .form>form>.submitbtn{
   width: fit-content;
   padding: 10px 30px;
-  border: 1px solid;
   display: block;
   margin: auto;
+  border:3px solid#d11243;
+  border-radius: 7px;
+}
+.form>form>.submitbtn:hover{
+  background-color:#d11243;
+  opacity: 1;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.9s;
 }
 .form>form>p{
   font-size: 19px;
@@ -553,3 +541,5 @@ text-align: center;
 .form>form>p>span{
   color: #d11243;
 }
+
+
