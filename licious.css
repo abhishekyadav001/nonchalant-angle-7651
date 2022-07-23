@@ -1,20 +1,22 @@
 body {
   position: relative;
   background-color: #f7f6f6;
+  font-family: 'Roboto Serif';
 }
 
 .navbarparent {
+  margin: auto;
   align-items: center;
   background-color: white;
   width: 100%;
-  margin-top: 50px;
-
+  margin-top: 10px;
+  margin-left: -7px;
   height: auto;
   position: sticky;
   top: 0;
   padding: 5px;
   z-index: 110;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .navbar {
@@ -78,7 +80,10 @@ body {
   cursor: pointer;
   position: relative;
 }
-
+.categories a{
+  text-decoration: none;
+  color: black  ;
+}
 .categories>img {
   width: 50%;
   height: 50%;
@@ -114,30 +119,14 @@ body {
   width: 100%;
   position: relative;
   margin: auto;
-  margin-top: 1px;
+  margin-left: -8px;
+  margin-top: 5px;
 }
 
-.banner>img {
-  width: 101%;
+.banner img{
+  width: 1813px;
+  height: 513.67px;
   margin: auto;
-}
-
-.banner button {
-  position: absolute;
-
-  top: 40%;
-  padding: 10px 20px;
-  border: 0;
-  border-radius: 50%;
-  font-size: 70px;
-}
-
-.banner>#firstbutton:hover {
-  background-color: #ffff;
-}
-
-.banner>button:nth-child(2) {
-  right: -5px;
 }
 
 .categoriesshop {
@@ -168,26 +157,29 @@ body {
   text-align: center;
 }
 
-.categoriesbox>div>img {
+.categoriesbox div img {
   width: 250px;
   height: 200px;
   border-radius: 25px;
   transition: .2s;
 }
-
-.categoriesbox>div>h4 {
+.categoriesbox a{
+  text-decoration: none;
+  color: black;
+}
+.categoriesbox  h4 {
   opacity: 0.7;
 }
 
-.categoriesbox>div>img:hover {
+.categoriesbox div img:hover{
   transform: scale(1.2);
 }
 
-.categoriesbox>div:hover {
+.categoriesbox div:hover {
   cursor: pointer;
 }
 
-.categoriesbox>div:hover h4 {
+.categoriesbox div:hover h4 {
   color: #d11243;
   opacity: 1;
 }
@@ -196,10 +188,11 @@ body {
   margin-top: 50px;
   width: 100%;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .deliverychild {
-  width: 50%;
+  width: 40%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -208,7 +201,7 @@ body {
   background-color: #fedb92;
 }
 
-.deliverychild>.Meatopiatop {
+.deliverychild .Meatopiatop {
   display: flex;
   justify-content: space-between;
   height: 70%;
@@ -216,19 +209,37 @@ body {
   border-bottom: 3px solid #ccb076;
 }
 
-.deliverychild>.bottom {
-  height: 10%;
-  font-size: 15px;
+.Meatopiatop img{
+  width: 116px;
+  height: 32px;
 }
 
-.Meatopiatop>.deliverypremium {
+.Meatopiatop button{
+  position:absolute;
+  right: 550px;
+  top: 18px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.bottom {
+  margin-top: 10px;
+  font-size: 12px;
+  height: fit-content;
+  padding: 0;
+  font-weight: 600;
+
+}
+.premiumdelivery a{
+  text-decoration: none;
+  color: black;
+}
+.deliverypremium{
   background-color: #d11243;
   border: 0;
   border-radius: 3px;
-  padding: 7px;
+  padding: 1px 6px;
   color: white;
-  font-weight: bold;
-
+ font-size: 14px;
 }
 
 
@@ -238,7 +249,7 @@ body {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  border: 2px dotted grey;
+  border: 1px solid #dedddd;
 }
 
 .featureslist>div {
@@ -317,18 +328,23 @@ body {
   position: absolute;
   top: 80px;
   right: 150px;
+  width: 200px;
   display: none;
   background-color: white;
   flex-direction: column;
 
 }
-
+.headpoints>div a{
+  text-decoration: none;
+  color: black;
+}
 .headpoints>div .menu {
   display: flex;
   align-items: center;
   border: 0px;
   border-bottom: 0.5px solid rgb(233, 225, 225);
   background-color: rgba(255, 255, 255, 0.428);
+  cursor: pointer;
 }
 
 .headpoints>div:hover {
@@ -342,13 +358,13 @@ body {
   margin-left: 7px;
 }
 
-.headpoints .menu>h3 {
+.headpoints .menu h3{
   font-size: 15px;
   margin-left: 15px;
   opacity: 0.6;
 }
 
-.headpoints>div:hover .menu>h3 {
+.headpoints>div:hover .menu h3 {
   opacity: 1;
 }
 
@@ -360,10 +376,9 @@ body {
   width: 200px;
   margin: auto;
   padding: 10px;
-  height: 100%;
-  line-height: 2;
-  font-size: 0.9em;
-  font-size: 20px;
+  height: 589px;
+  line-height: 4;
+  font-size: 15px;
   background-color: #f1f1f1;
   display: none;
 }
@@ -382,14 +397,16 @@ body {
   width: 70%;
   margin: auto ;
   margin-top: 30px;
-  background-color: #fae4e8;
 }
 
 .loginreward {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 70%;
   margin: auto;
+  cursor: pointer;
+  position: relative;
+  background-color: #fae4e8;
 }
 
 .leftsection {
@@ -397,33 +414,48 @@ body {
   padding: 20px;
 }
 
-
+.leftsection img{
+  width: 45px;
+  height: 45px;
+}
+.leftsection b{
+  font-size: 16px;
+}
+.leftsection p{
+  font-size: 12px;
+}
 .rightsection{
 display: flex;
 justify-content: center;
 align-items: center;
 gap: 10px;
-font-size: 1.1em;
 cursor: pointer;
+position: absolute;
+right: 27px;
+top:15px;
+color:#d1128a;
 }
-
+.rightsection img{
+  width: 10px;
+  height: 10px;
+}
+.rightsection p{
+  font-size: 12px;
+}
 .exploreparent {
   display: flex;
   flex-direction: column;
-
   width: fit-content;
   margin: auto;
   margin-top: 50px;
-
   width: 80%;
 }
 
 .Explorecategory {
   width: 100%;
-
 }
 
-.exploreparent>.explorehead {
+.explorehead {
   font-size: 30px;
   font-weight: bolder;
 }
@@ -438,32 +470,35 @@ cursor: pointer;
 
 }
 
-.divcontainer>div {
+.divcontainer div{
   margin: auto;
+  cursor: pointer;
 }
 
-.divcontainer>div img {
+.divcontainer div img {
   width: 250px;
   height: 250px;
   border-radius: 20px;
   transition: .1s;
 }
-
-.divcontainer>div:hover img {
+.divcontainer a{
+  text-decoration: none;
+  color: black;
+}
+.divcontainer div:hover img {
   transform: scale(1.1);
 }
 
-.divcontainer>div h2 {
+.divcontainer div h2 {
   opacity: 0.7;
+  font-weight:bolder;
+  font-size: 16px;
 }
 
-.divcontainer>div:hover h2 {
+.divcontainer div:hover h2 {
   color: #d11243;
   opacity: 1;
 }
-
-
-
 
 
 .bottombanner{
@@ -547,7 +582,6 @@ text-align: center;
 .blog{
   margin: auto;
   width: 100%;
-  /* border: 4px solid blue; */
 }
 .blogparent{
 
@@ -578,10 +612,11 @@ flex-direction: column;
 
  
 }
+
 .blogcontainer>a{
- 
   text-decoration: none;
 }
+
 .blogcontainer>a>div>img{
   width: 100%;
   border-radius: 10px;
@@ -589,9 +624,163 @@ flex-direction: column;
 
 .blogcontainer>a>div p{
  text-decoration: none;
- font-size: 18px;
+ font-size: 16px;
   color: black;
   font-weight: bolder;
   width: 100%;
   padding-left: 10px;
+}
+
+.footer{
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  margin-left: -12px;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.footer>a{
+  width: 15%;
+}
+
+.footer>.toplogo>a img{
+  width:120px;
+  height: 49.56px;
+}
+
+.toplogo{
+  display: flex;
+  flex-direction: row ;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.footer .divider{
+  flex-grow: 0.9;
+  height: 0;
+  background-color: #eaeaea;
+  opacity: 0.7;
+}
+
+.usefullinks{
+  width: 35%;
+  margin-left: 150px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 0.9;
+  }
+
+  .applinked{
+    margin-left: 20px;
+    position: relative;
+    right: 10px;
+  }
+
+  .imglinked{
+   width: fit-content;
+   height: fit-content;
+   margin: auto;
+  }
+.usefullinks h4{
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,sans-serif;
+}
+.usefullinks p{
+font-size: 14px;
+width: 100%;
+cursor: pointer;
+}
+.linkingsite{
+  display: flex;
+}
+.secondsection{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.secondsection p{
+  font-size: 14px;
+}
+.secondsection>div{
+  margin-left: 15px;
+}
+.creditcard img{
+width: 30%;
+}
+.termsconditions{ 
+  margin-top: 8px;
+}
+.termsconditions p{
+  cursor: pointer;
+}
+.socialconnection{
+  position: absolute;
+  left: 400px;
+  bottom: 250px;
+}
+.socialconnection>div{
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+.socialconnection>div img{
+  filter: grayscale(100%);
+}
+.socialconnection>div img:hover{
+ filter: grayscale(0);
+}
+
+.cities{
+  width: 80%;
+  margin: auto;
+ 
+}
+.cities>.heading>div{
+  display: flex;
+  flex-direction: row ;
+  align-items: center;
+}
+.cities>.heading>div hr{
+  flex-grow:1;
+  height: 0;
+  opacity: 0.7;
+  background-color: #fedb92;
+}
+.cities>.heading h5{
+  text-align: left;
+  padding-right:15px ;
+}
+
+.citiesname>p{
+letter-spacing: 0.5px;
+word-spacing: 10px;
+line-height: 2;
+font-size: 12px;
+width: 100%;
+margin: auto;
+cursor: pointer;
+}
+.bottomdisclaimer{
+  width: 70%;
+margin: auto;
+text-align: center;
+margin-bottom: 40px;
+}
+.bottomdisclaimer>.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -20px;
+}
+.bottomdisclaimer>.header>h5 img{
+  width: 15px;
+  height: 15px;
+}
+
+.bottomdisclaimer>.dispara p{
+  text-align: center;
+  font-size:13px;
 }
