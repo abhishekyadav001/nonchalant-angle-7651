@@ -10,7 +10,7 @@ body {
   background-color: white;
   width: 100%;
   margin-top: 10px;
-  margin-left: -8px;
+  margin-left: -7px;
   height: auto;
   position: sticky;
   top: 0;
@@ -249,7 +249,7 @@ body {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  border: 2px dotted grey;
+  border: 1px solid #dedddd;
 }
 
 .featureslist>div {
@@ -397,14 +397,16 @@ body {
   width: 70%;
   margin: auto ;
   margin-top: 30px;
-  background-color: #fae4e8;
 }
 
 .loginreward {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 70%;
   margin: auto;
+  cursor: pointer;
+  position: relative;
+  background-color: #fae4e8;
 }
 
 .leftsection {
@@ -412,24 +414,40 @@ body {
   padding: 20px;
 }
 
-
+.leftsection img{
+  width: 45px;
+  height: 45px;
+}
+.leftsection b{
+  font-size: 16px;
+}
+.leftsection p{
+  font-size: 12px;
+}
 .rightsection{
 display: flex;
 justify-content: center;
 align-items: center;
 gap: 10px;
-font-size: 1.1em;
 cursor: pointer;
+position: absolute;
+right: 27px;
+top:15px;
+color:#d1128a;
 }
-
+.rightsection img{
+  width: 10px;
+  height: 10px;
+}
+.rightsection p{
+  font-size: 12px;
+}
 .exploreparent {
   display: flex;
   flex-direction: column;
-
   width: fit-content;
   margin: auto;
   margin-top: 50px;
-
   width: 80%;
 }
 
@@ -481,9 +499,6 @@ cursor: pointer;
   color: #d11243;
   opacity: 1;
 }
-
-
-
 
 
 .bottombanner{
@@ -567,7 +582,6 @@ text-align: center;
 .blog{
   margin: auto;
   width: 100%;
-  /* border: 4px solid blue; */
 }
 .blogparent{
 
@@ -598,10 +612,11 @@ flex-direction: column;
 
  
 }
+
 .blogcontainer>a{
- 
   text-decoration: none;
 }
+
 .blogcontainer>a>div>img{
   width: 100%;
   border-radius: 10px;
@@ -628,6 +643,7 @@ flex-direction: column;
 .footer>a{
   width: 15%;
 }
+
 .footer>.toplogo>a img{
   width:120px;
   height: 49.56px;
@@ -656,14 +672,14 @@ flex-direction: column;
   justify-content: space-between;
   line-height: 0.9;
   }
+
   .applinked{
     margin-left: 20px;
-   
     position: relative;
     right: 10px;
   }
+
   .imglinked{
-  
    width: fit-content;
    height: fit-content;
    margin: auto;
