@@ -82,6 +82,7 @@ body {
 }
 .categories a{
   text-decoration: none;
+  color: black  ;
 }
 .categories>img {
   width: 50%;
@@ -122,7 +123,7 @@ body {
   margin-top: 5px;
 }
 
-.banner>img {
+.banner img{
   width: 1813px;
   height: 513.67px;
   margin: auto;
@@ -187,6 +188,7 @@ body {
   margin-top: 50px;
   width: 100%;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .deliverychild {
@@ -210,6 +212,14 @@ body {
 .Meatopiatop img{
   width: 116px;
   height: 32px;
+}
+
+.Meatopiatop button{
+  position:absolute;
+  right: 550px;
+  top: 18px;
+  cursor: pointer;
+  padding: 10px 20px;
 }
 .bottom {
   margin-top: 10px;
@@ -427,7 +437,7 @@ cursor: pointer;
   width: 100%;
 }
 
-.exploreparent>.explorehead {
+.explorehead {
   font-size: 30px;
   font-weight: bolder;
 }
@@ -442,23 +452,26 @@ cursor: pointer;
 
 }
 
-.divcontainer>div {
+.divcontainer div{
   margin: auto;
   cursor: pointer;
 }
 
-.divcontainer>div img {
+.divcontainer div img {
   width: 250px;
   height: 250px;
   border-radius: 20px;
   transition: .1s;
 }
-
-.divcontainer>div:hover img {
+.divcontainer a{
+  text-decoration: none;
+  color: black;
+}
+.divcontainer div:hover img {
   transform: scale(1.1);
 }
 
-.divcontainer>div h2 {
+.divcontainer div h2 {
   opacity: 0.7;
   font-weight:bolder;
   font-size: 16px;
