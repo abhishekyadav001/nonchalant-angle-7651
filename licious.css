@@ -1,6 +1,7 @@
 body {
   position: relative;
   background-color: #f7f6f6;
+  font-family: 'Roboto Serif';
 }
 
 .navbarparent {
@@ -420,7 +421,6 @@ cursor: pointer;
 
 .Explorecategory {
   width: 100%;
-
 }
 
 .exploreparent>.explorehead {
@@ -440,6 +440,7 @@ cursor: pointer;
 
 .divcontainer>div {
   margin: auto;
+  cursor: pointer;
 }
 
 .divcontainer>div img {
@@ -455,6 +456,8 @@ cursor: pointer;
 
 .divcontainer>div h2 {
   opacity: 0.7;
+  font-weight:bolder;
+  font-size: 16px;
 }
 
 .divcontainer>div:hover h2 {
@@ -589,7 +592,7 @@ flex-direction: column;
 
 .blogcontainer>a>div p{
  text-decoration: none;
- font-size: 18px;
+ font-size: 16px;
   color: black;
   font-weight: bolder;
   width: 100%;
@@ -601,52 +604,148 @@ flex-direction: column;
   background-color: white;
   margin: auto;
   margin-top: 50px;
-  height:600px;
- 
-  
   border: 1px solid ;
 }
 
 .footer>a{
   width: 15%;
-  border: 1px solid;
 }
 .footer>.toplogo>a img{
   width:120px;
   height: 49.56px;
- 
 }
+
 .toplogo{
-  
   display: flex;
   flex-direction: row ;
   align-items: center;
   width: 70%;
   margin: auto;
   margin-top: 50px;
-  
 }
 
 .footer .divider{
   flex-grow: 0.9;
   height: 0;
-background-color: #eaeaea;
-opacity: 0.7;
+  background-color: #eaeaea;
+  opacity: 0.7;
 }
 
 .usefullinks{
-  width: 50%;
+  width: 35%;
   margin-left: 150px;
-  border: 1px solid blue;
   display: flex;
   justify-content: space-between;
+  line-height: 0.9;
+  }
+  .applinked{
+    margin-left: 20px;
+   
+    position: relative;
+    right: 10px;
+  }
+  .imglinked{
+  
+   width: fit-content;
+   height: fit-content;
+   margin: auto;
   }
 .usefullinks h4{
-font-family: Roboto,sans-serif;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,sans-serif;
 }
 .usefullinks p{
-margin: 0;
-
+font-size: 14px;
 width: 100%;
+cursor: pointer;
+}
+.linkingsite{
+  display: flex;
+}
+.secondsection{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.secondsection p{
+  font-size: 14px;
+}
+.secondsection>div{
+  margin-left: 15px;
+}
+.creditcard img{
+width: 30%;
+}
+.termsconditions{ 
+  margin-top: 8px;
+}
+.termsconditions p{
+  cursor: pointer;
+}
+.socialconnection{
+  position: absolute;
+  left: 400px;
+  bottom: 250px;
+}
+.socialconnection>div{
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+.socialconnection>div img{
+  filter: grayscale(100%);
+}
+.socialconnection>div img:hover{
+ filter: grayscale(0);
+}
 
+.cities{
+  width: 80%;
+  margin: auto;
+ 
+}
+.cities>.heading>div{
+  display: flex;
+  flex-direction: row ;
+  align-items: center;
+}
+.cities>.heading>div hr{
+  flex-grow:1;
+  height: 0;
+  opacity: 0.7;
+  background-color: #fedb92;
+}
+.cities>.heading h5{
+  text-align: left;
+  padding-right:15px ;
+}
+
+.citiesname>p{
+letter-spacing: 0.5px;
+word-spacing: 10px;
+line-height: 2;
+font-size: 12px;
+width: 100%;
+margin: auto;
+}
+.bottomdisclaimer{
+  width: 70%;
+margin: auto;
+text-align: center;
+margin-bottom: 40px;
+}
+.bottomdisclaimer>.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -20px;
+}
+.bottomdisclaimer>.header>h5 img{
+  width: 15px;
+  height: 15px;
+}
+
+.bottomdisclaimer>.dispara p{
+  text-align: center;
+  font-size:13px;
 }
