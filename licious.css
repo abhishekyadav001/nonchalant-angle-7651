@@ -595,3 +595,58 @@ flex-direction: column;
   width: 100%;
   padding-left: 10px;
 }
+
+.footer{
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  margin-top: 50px;
+  height:600px;
+ 
+  
+  border: 1px solid ;
+}
+
+.footer>a{
+  width: 15%;
+  border: 1px solid;
+}
+.footer>.toplogo>a img{
+  width:120px;
+  height: 49.56px;
+ 
+}
+.toplogo{
+  
+  display: flex;
+  flex-direction: row ;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+  
+}
+
+.footer .divider{
+  flex-grow: 0.9;
+  height: 0;
+background-color: #eaeaea;
+opacity: 0.7;
+}
+
+.usefullinks{
+  width: 50%;
+  margin-left: 150px;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+  }
+.usefullinks h4{
+font-family: Roboto,sans-serif;
+}
+.usefullinks p{
+margin: 0;
+
+width: 100%;
+
+}
