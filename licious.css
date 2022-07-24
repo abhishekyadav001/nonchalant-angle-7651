@@ -73,23 +73,24 @@ body {
   top: 25%;
 }
 
-.categories>div {
+.categories div {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   position: relative;
+  
 }
 .categories a{
   text-decoration: none;
-  color: black  ;
+  color: black;
 }
 .categories>img {
   width: 50%;
   height: 50%;
 }
 
-.categories>p:hover {
+.categories a:hover{
   color: #d11243;
 }
 
@@ -109,6 +110,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .cart p:hover {
@@ -116,7 +118,7 @@ body {
 }
 
 .banner {
-  width: 100%;
+  width:fit-content;
   position: relative;
   margin: auto;
   margin-left: -7px;
@@ -124,9 +126,10 @@ body {
 }
 
 .banner img{
-  width: 100%;
-  height:100%;
+ width: 197vh;
+ height:100%;
   margin: auto;
+  margin-left: -4px;
 }
 
 .categoriesshop {
@@ -215,9 +218,6 @@ body {
 }
 
 .Meatopiatop button{
-  position:absolute;
-  right: 560px;
-  top: 18px;
   cursor: pointer;
   padding: 10px 20px;
 }
@@ -298,17 +298,25 @@ body {
 }
 
 .offerimage {
-  width: 80%;
-  margin-top: 50px;
+  margin: auto ;
+  margin-top: 20px;
 }
 
 .offerimage>.image {
-  width: 50%;
+  width: fit-content;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
 }
-
+ 
+.image img{
+  width: 1035px;
+  height: 122px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
 .referralgift {
   display: flex;
   align-items: center;
@@ -394,15 +402,16 @@ body {
 .rewardparentdiv {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 100%;
   margin: auto ;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .loginreward {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 787.5px;
+  height: 82.44px;
   margin: auto;
   cursor: pointer;
   position: relative;
@@ -412,17 +421,26 @@ body {
 .leftsection {
   display: flex;
   padding: 20px;
+  line-height: 1;
+  margin-top: -12px;
+  gap: 10px;
 }
-
+.paragraph{
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  margin-top: 12px;
+}
 .leftsection img{
-  width: 45px;
-  height: 45px;
+  width: 24px;
+  height: 24px;
+  margin-top: 20px;
 }
 .leftsection b{
   font-size: 16px;
 }
 .leftsection p{
-  font-size: 12px;
+  font-size: 11px;
 }
 .rightsection{
 display: flex;
